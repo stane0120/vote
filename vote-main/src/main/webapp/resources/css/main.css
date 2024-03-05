@@ -1,0 +1,370 @@
+body {
+  margin: 0;
+}
+header *,
+footer * {
+  margin: 0;
+  padding: 0;
+  /* border: 1px solid black; */
+}
+
+/* header */
+header {
+  height: 57px;
+  border-bottom: 2px solid #ccc;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-menu-icon {
+  height: 100%;
+  margin: auto;
+  width: 960px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-logo {
+  width: 160px;
+}
+.header-menu {
+  margin-left: 15px;
+  width: 90%;
+  display: flex;
+  align-items: center;
+}
+
+.header-icon {
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-icon i {
+  margin: 0 12px;
+}
+
+/* 로고 */
+
+.header-logo {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+}
+#logoimg {
+  height: 40px;
+}
+
+/* 메뉴 */
+.header-menu > ul {
+  display: flex;
+  position: relative;
+  font-size: 16px;
+}
+
+.header-a {
+  display: inline-block; /* 인라인 블록 요소로 설정하여 가로 정렬 */
+  text-align: center; /* 수평 중앙 정렬 */
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+.header-a:hover,
+.header-a:active {
+  color: #2db400;
+  box-shadow: 0;
+  position: relative;
+  top: 2px;
+  color: #2db400;
+}
+.fa-user:active {
+  color: #2db400;
+  box-shadow: 0;
+  position: relative;
+  top: 2px;
+  color: #2db400;
+}
+
+.header-a i:hover {
+  color: #2db400;
+}
+
+.header-a:hover,
+.header-a:active {
+  position: relative;
+  top: 2px;
+  color: #2db400;
+}
+
+.fa-user:active {
+  color: #2db400;
+  position: relative;
+  top: 2px;
+  color: #2db400;
+}
+
+.header-a i:hover {
+  color: #2db400;
+}
+
+.header-menu a:hover {
+  color: #2db400;
+}
+
+.header-menu li {
+  list-style: none;
+  padding: 15px;
+  position: relative;
+}
+
+.header-menu li::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 3px;
+  background-color: #2db400;
+  transition: width 0.5s ease-in-out;
+}
+
+.header-menu li:hover::after {
+  width: 100%;
+}
+
+.user-menu a:hover {
+  background-color: #2db400;
+  color: white;
+}
+
+/* 아이콘 */
+.header-icon {
+  position: relative;
+  text-align: center;
+  font-size: 24px;
+}
+
+/* 로그인했을때 유저옵션 */
+#userMenuToggle {
+  display: none;
+}
+
+label[for='userMenuToggle'] {
+  cursor: pointer;
+}
+label[for='userMenuToggle']:hover {
+  text-decoration: underline;
+}
+
+#userMenuToggle + div {
+  display: none;
+}
+
+#userMenuToggle:checked + div {
+  display: block;
+}
+
+.user-menu {
+  position: absolute;
+  top: 58px;
+
+  background-color: white;
+  z-index: 10;
+
+  border: 2px solid #ccc;
+}
+
+.user-menu > a {
+  width: 120px;
+  height: 40px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 16px;
+}
+
+.user-menu > span {
+  display: flex;
+  justify-self: start;
+
+  padding-left: 15px;
+  font-size: 12px;
+  justify-content: start;
+}
+
+.user-menu > span:first-child {
+  padding-top: 10px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.user-menu > span:nth-child(2) {
+  padding-bottom: 10px;
+  border-bottom: 2px solid #ccc;
+}
+
+.user-menu > a:first-child {
+  border-bottom: 2px solid #ccc;
+}
+
+.user-menu > a:hover {
+  background-color: #2db400;
+  color: white;
+  /* border: 2px solid #515151; */
+}
+
+.user-image {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+.user-menu {
+  position: absolute;
+  top: 58px;
+
+  background-color: white;
+  z-index: 10;
+
+  border: 2px solid #ccc;
+}
+
+.user-menu > a {
+  width: 120px;
+  height: 40px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 16px;
+}
+
+.user-menu > span {
+  display: flex;
+  justify-self: start;
+
+  padding-left: 15px;
+  font-size: 12px;
+  justify-content: start;
+}
+
+.user-menu > span:first-child {
+  padding-top: 10px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.user-menu > span:nth-child(2) {
+  padding-bottom: 10px;
+  border-bottom: 2px solid #ccc;
+}
+
+.user-menu > a:first-child {
+  border-bottom: 2px solid #ccc;
+}
+
+/* alarm */
+#alarmToggle {
+  display: none;
+}
+
+label[for='alarmToggle'] {
+  cursor: pointer;
+}
+
+#alarmToggle + div {
+  display: none;
+}
+
+#alarmToggle:checked + div {
+  display: block;
+}
+
+.alarm-menu {
+  position: absolute;
+  top: 0;
+  left: 213px;
+
+  background-color: white;
+  z-index: 10;
+
+  border: 2px solid #ccc;
+  border-radius: 5px;
+
+  width: 330px;
+  height: 500px;
+
+  overflow-y: scroll;
+}
+
+.alarm-menu::-webkit-scrollbar{
+  display: none;
+}
+
+/* main */
+main {
+  height: 100%;
+  min-height: calc(100vh - 57px - 150px);
+  padding-bottom: 10px;
+}
+
+/* footer */
+footer {
+  position: relative;
+
+  height: 150px;
+  background-color: #30312f;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 12px;
+  color: white;
+}
+
+.footer-content {
+  width: 960px;
+}
+
+.footer-header {
+  display: flex;
+  align-items: center;
+}
+
+#footlogo {
+  height: 20px;
+}
+
+.footer-header a {
+  color: white;
+  text-decoration: none;
+}
+
+.selected {
+  color: #2db400;
+}
+
+/* #userIcon:hover{
+  #2db400;
+} */
+
+.user-menu a:hover {
+  background-color: #2db400;
+  color: white;
+}
+
+#loginBtn {
+  font-size: 16px;
+}

@@ -1,0 +1,290 @@
+
+
+
+*{ 
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+/* 임시테두리 */
+/* main, header, section, footer{
+    border: 1px solid black;
+} */
+
+main{
+    width: 960px;
+    /* height: 925px; */
+    margin: auto;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+/* body */
+body{
+    align-items: start;
+}
+
+
+
+
+
+
+/* 상단메뉴 */
+#top{
+    display: flex;
+    flex-direction: column;
+    justify-content:start;
+
+    width: 40%;
+    margin-right: 60%;
+}
+
+
+#menu{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+
+#menu>*{
+    margin: 5px 10px;
+}
+
+#menu *{
+    color: black;
+    text-decoration: none;
+    
+}
+
+#details:hover{
+    color: #2DB400;
+    font-weight: bold;
+    text-decoration: none;
+    
+}
+
+
+#updates{
+    color: #2DB400;
+    font-weight: bold;
+}
+
+
+
+
+
+
+/* 업데이트 페이지 타이틀  */
+#updatesSection1{
+    margin: 50px 40% 0 0;
+}
+
+
+#updatesBT{
+    font-weight: bold;
+    font-size: 25px;
+    color: black;
+    text-decoration: none;
+    margin: 10px;
+}
+
+
+/* 업데이트 내용 */
+#updatesSection2{
+    margin: 20px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* 슬라이드 버튼 */
+#left{
+    width: 50px;
+    height: 50px;
+    margin: auto;
+    color: #2DB400;
+}
+
+#right{
+    width: 50px;
+    height: 50px;
+    color: #2DB400;
+}
+
+
+/* 고정된 슬라이드 영역 */
+.slide{
+    width: 600px;
+    height: 600px;
+
+    overflow: hidden;
+    position: relative;
+}
+
+/* 슬라이드의 내용이 되는 페이지 영역 */
+.frame{
+    display: flex;
+    flex-direction: row-reverse;
+    left: 0;
+    width: 550px;
+    transition-property: transform;
+    transition-duration: 1s;
+}
+
+/* frame 내부 업데이트 건건의 영역 */
+.updatesFrame{
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    
+    float: left;
+    
+    width: 480px !important;
+    height: 480px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+    margin: 10px;
+    padding: 20px;
+
+    overflow: scroll;
+}
+
+/* 각 업데이트의 내용 */
+.updatesImg{
+    width: 440px;
+    height: 250px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    margin-bottom: 20px;
+}
+
+
+.updatesT{
+    font-weight: bold;
+    font-size: 24px;
+    color: black;
+    text-decoration: none;
+    margin: 20px 10px;
+}
+
+
+.updatesC{
+    font-size: 16px;
+    color: black;
+    text-decoration: none;
+    
+    margin: 10px;
+}
+
+.updatesC img {
+    width: 440px !important;
+}
+
+.updatesProfile{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    
+    margin: 10px;
+}
+
+
+.profileImg{
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    margin: 10px;
+}
+
+
+
+
+/* 버튼 */
+#rightBtn{
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border: 3px solid #ccc;
+    border-radius: 5px;
+    margin-left: 10px;
+
+    font-weight: bold;
+    font-size: 25px;
+    color: #2DB400;
+    text-decoration: none;
+}
+
+#rightBtn:active{
+    background-color: #ccc;
+}
+
+
+#rightBtn:disabled{
+    cursor: default;
+}
+
+
+#leftBtn{
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border: 3px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+
+    font-weight: bold;
+    font-size: 25px;
+    color: #2DB400;
+    text-decoration: none;
+}
+
+#leftBtn:active{
+    background-color: #ccc;
+}
+
+
+.move{
+    transform: translateX(480px)
+}
+
+#noUpdateBox{
+    width: 550px;
+    height: 500px;
+    
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    font-weight: bold;
+    text-align: center;
+    
+    border-radius: 5px;
+    border: 1px dashed #ccc;
+}
+
+#horizenAlign {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    margin-left: 10px;
+}
+
+.uNickname {
+    font-weight: bold;
+}
+
+.uDate {
+    color: #ccc;
+    font-size: 12px;
+}

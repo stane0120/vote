@@ -1,0 +1,256 @@
+.container4 {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  width: 960px;
+  margin: 0 auto;
+}
+
+.container5 {
+  padding-left: 30px;
+  padding-top: 20px;
+  margin-top: 40px;
+  margin-left: 3px;
+  align-self: start;
+  position: sticky;
+  top: 0px;
+  min-width: 0px;
+  float: right;
+}
+.main-section {
+  flex-basis: 70%; /* 메인 섹션의 너비 */
+}
+
+.side-section {
+  flex-basis: 30%; /* 사이드 섹션의 너비 */
+}
+
+.content {
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  padding: 0;
+}
+
+.pet-title {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid lightgray;
+}
+.pet-title a:first-child {
+  margin-right: auto;
+}
+.container4 li {
+  margin-bottom: 30px;
+  margin-top: 30px;
+  list-style: none;
+}
+#more {
+  color: #2db400;
+  text-decoration: underline;
+}
+
+.pet-title > a:last-child {
+  margin-left: auto;
+  padding-right: 15px;
+  font-size: 13px;
+}
+.article {
+  padding: 20px;
+  text-decoration: none;
+  display: flex;
+  align-items: flex-start; /* 수정 */
+  flex-direction: row;
+  justify-content: space-between;
+}
+/* 
+#photo2 {
+  width: 145px;
+  height: 145px;
+  background-image: url('../img/article-photo2.jpeg')
+  background-size: cover;
+  float: right;
+}
+#photo3 {
+  width: 145px;
+  height: 145px;
+  background-image: url('../img/article-photo3.png');
+  background-size: cover;
+  float: right;
+}
+#photo4 {
+  width: 145px;
+  height: 145px;
+  background-image: url('../img/article-photo4.png');
+  background-size: cover;
+  float: right;
+} */
+
+.article {
+  display: grid;
+  gap: 15px;
+
+  grid-template-areas:
+    'a a c'
+    'b b c';
+}
+
+.article-title {
+  grid-area: a;
+}
+.text {
+  grid-area: b;
+}
+.photo {
+  grid-area: c;
+}
+.text div {
+  font-size: 13px;
+  line-height: 1.5;
+}
+.id a:first-child {
+  margin-right: auto;
+}
+
+.id a:last-child {
+  margin-left: auto;
+  padding-right: 15px;
+  font-size: 13px;
+  text-decoration: none;
+}
+.id {
+  display: flex;
+  align-items: center;
+}
+.title-icon {
+  border: 1px solid lightgray;
+  text-decoration: none;
+  color: #666666;
+  border-radius: 20px;
+  margin: 5px;
+  padding: 10px;
+  font-size: 15px;
+}
+.title-list {
+  list-style: none;
+}
+.container5 li {
+  margin-bottom: 20px;
+}
+#icon-topic {
+  color: #666666;
+  font-size: 18px;
+}
+.title-list a:hover {
+  border: 1px solid red;
+  color: red;
+}
+.id-profile {
+  margin-left: 15px;
+}
+
+div a {
+  text-decoration: none;
+  color: black;
+}
+/* @media screen and (min-width: 768px) .article {
+  display: none;
+} */
+/* .article {
+  flex-direction: column;
+  padding: 20px;
+  display: flex;
+} */
+/* 
+#slide-btn1 {
+  position: absolute;
+  margin-left: -150px;
+  margin-top: 130px;
+  font-size: 30px;
+}
+#slide-btn2 {
+  position: relative;
+  margin-top: -380px;
+  margin-left: 1080px;
+  font-size: 30px;
+} */
+/* #loadButton {
+  width: 100%;
+  height: 50px;
+  font-size: 16px;
+  font-weight: bold;
+  color: black;
+  border: 2px solid rgb(149, 147, 147);
+  border-radius: 5px;
+  background-color: white;
+  text-decoration: underline;
+  margin-bottom: 25px;
+} */
+#loadButton {
+  background: #fff;
+  color: black;
+  border: none;
+  position: relative;
+  height: 60px;
+  font-size: 1.05em;
+  padding: 0 2em;
+  cursor: pointer;
+  transition: 800ms ease all;
+  outline: none;
+  width: 100%;
+  height: 50px;
+  border-radius: 5px;
+  border: 2px solid lightgray;
+  margin-bottom: 25px;
+  text-decoration: underline;
+}
+
+#loadButton:hover {
+  box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.25) inset;
+  border: 3px solid rgb(124, 123, 123);
+}
+#loadButton:hover {
+  box-shadow: 716px 0 0 rgba(0, 0, 0, 0.25) inset;
+}
+
+.petCategory:hover {
+  color: #2db400;
+}
+#box-petition-title:hover {
+  color: red;
+}
+
+#news-title:hover {
+  color: red;
+}
+.article {
+  border: red;
+}
+
+.article:hover {
+  color: red;
+}
+
+.profile-image {
+  border-radius: 50%;
+  width: 28px;
+}
+div.pettition1.id {
+  padding-left: 13px;
+  padding-bottom: 5px;
+}
+
+.text-limit4 {
+  overflow: hidden;
+  height: 24px;
+  max-width: 600px;
+}
+.text-limit5 {
+  overflow: hidden;
+  height: 52px;
+  max-width: 500px;
+}
+.text-limit6 {
+  overflow: hidden;
+  max-height: 108px;
+  max-width: 500px;
+}

@@ -1,0 +1,439 @@
+main *{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  /* border: 1px solid black; */
+}
+
+main a{
+  text-decoration: none;
+  color: black;
+}
+
+main li{list-style: none;}
+
+.dp-block{
+  display: block;
+}
+
+/* nav */
+nav{
+  margin: auto;
+  width: 960px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 5px;
+}
+
+nav a:hover{color: #2db400;}
+
+.nav-title{
+  margin-top: 20px;
+}
+
+.nav>ul{
+  display: flex;
+}
+
+.nav li{
+  padding: 15px;
+  position: relative;
+}
+
+#nav::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background-color: #2db400;
+  /* transition: width 0.5s ease-in-out; */
+}
+
+#nav:hover::after {
+  width: 100%;
+}
+
+#navSelect{border-bottom: 2px solid #2db400;}
+#navSelect>a{color: #2db400;}
+
+/* content */
+.content{
+  border-top: 1px solid #ccc;
+  height: 2000px;
+}
+
+/* content-edit */
+.content-edit{
+  width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  height: 927px;
+  text-align: center;
+  padding: 50px 0eh;
+}
+
+textarea{
+  resize: none;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  font-size: 16px;
+  padding: 10px;
+}
+
+/* 팁보기 */
+.tip{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0,0,0,0.4);
+  z-index: 500;
+  border: 0;
+}
+
+.tip-container{
+  background-color: white;
+  width: 400px;
+  border-radius: 10px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.fa-rectangle-xmark{
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.tip *{padding: 5px}
+
+.tip p{font-size: 13px;}
+
+.tip-top{
+  display: flex;
+  justify-content: space-between;
+}
+
+#tipFont{
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.content-side-title{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.content-side-title>span{
+  font-size: 12px;
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.content-top>*, .content-data>*{
+  margin-top: 30px;
+  height: 40px;
+}
+
+.content-title{
+  padding: 30px 0;
+}
+
+#summernote{
+  height: 100%;
+  width: 100%;
+
+}
+
+
+.img-top{margin-top: 20px;}
+
+.img-link{
+  margin: 10px 0 10px;
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  background-color: lemonchiffon;
+  border: 1px solid yellow;
+  border-radius: 5px;
+  color: #2db400;
+  text-decoration: underline;
+  font-size: 16px;
+}
+
+
+.content-img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 400px;
+  background-color: #ececec;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.img-upload{
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-upload>img{
+  max-height: 347px;
+  max-width: 560px;
+  border-radius: 10px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#imgDelete{
+  position: absolute;
+  top: 0px;
+  left: 540px;
+  padding: 0;
+  margin: 0;
+  width: 35px;
+  height: 35px;
+  font-size: 30px;
+  border-radius: 10px;
+  text-align: center;
+  vertical-align: middle;
+  font-weight: bold;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+#imgUpload{
+  height: 48px;
+
+  font-size: 16px;
+  font-style: italic;
+  background-color: white;
+  padding: 12px 16px;
+  border: 1px solid #dbd9db;
+  border-radius: 10px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.07);
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  cursor: pointer;
+}
+
+#inputImgUpload{
+  display: none;
+}
+
+/* content-data */
+
+.content-data{
+  padding: 20px 0;
+}
+
+.content-data-side-title{
+  display: flex;
+  align-items: center;
+  height: 40px;
+}
+
+/* 청원 데이터 팁 */
+.fa-circle-question{
+  position: relative;
+}
+
+.fa-circle-question>div{
+  display: none;
+  position: absolute;
+  width: 240px;
+  bottom: 30px;
+  left: -95px;
+
+  color: white;
+  background-color: black;
+  border-radius: 10px;
+  padding: 10px;
+
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.fa-circle-question:after{
+  display: none;
+  border-top: 7px solid black;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 0px solid transparent;
+  content: "";
+  position: absolute;
+  top: -14px;
+  left: 1px;
+}
+
+.fa-circle-question:hover:after{
+  display: block;
+}
+
+.content-data-side-title>*{
+  padding-right: 10px;
+}
+
+/* 범위 */
+.scope{
+  width: 100%;
+  height: 40px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  padding: 10px;
+  outline: none;
+}
+
+/* 위치 */
+#lcationInput{
+  width: 100%;
+  height: 40px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  padding: 10px;
+  outline: none;
+}
+
+/* 주제추가 */
+#topicInput{
+  font-size: 16px;
+  border: none;
+  outline: none;
+}
+
+#topicInput{
+  margin: 10px 3px;
+  width: 300px;
+}
+
+#addTopicBox{
+  min-height: 60px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#addTopicBox>div{
+  margin: 3px;
+  padding: 5px 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 2px solid #ccc;
+  background-color: white;
+  border-radius: 5px;
+
+  cursor: pointer;
+}
+
+#addTopicBox *{vertical-align: middle;}
+
+#addTopicBox>div:hover{
+  color: #2db400;
+}
+
+#addTopicBox span{
+  pointer-events: none;
+}
+
+.fa-rectangle-xmark{
+  color: #828282;
+}
+
+/* 결정권자 */
+.content-owner{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 100%;
+  height: 100px;
+  background-color: #ececec;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.content-owner input{
+  width: 100%;
+  height: 40px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding-left: 5px;
+  outline: none;
+}
+
+/* 기본 트위터 메시지 */
+textarea{
+  outline: none;
+  border: 1px solid #ccc;
+}
+
+/* 편집버튼 */
+.edit-btn{
+  display: flex;
+  justify-content: end;
+  margin: 30px 0;
+  width: 100%;
+  height: 40px;
+}
+
+.edit-btn *{
+  font-size: 20px;
+  margin-left: 20px;
+  border-radius: 5px;
+  width: 100px;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+}
+
+#cancel{
+  border: 2px solid #2db400;
+  background-color: white;
+}
+
+#save{
+  background-color: #2db400;
+  color: white;
+}
+
+.edit-btn *:active{
+  transform: scale(0.9);
+}
